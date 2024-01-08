@@ -20,5 +20,3 @@ test-pack:
 	poetry build
 	python3 -m pip install --user dist/*.whl
 	brain-games
-	python3 -m pip uninstall hexlet-code
-	echo 'Program has been finished sucsesfull'
