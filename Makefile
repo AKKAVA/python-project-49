@@ -20,3 +20,6 @@ test-pack:
 	poetry build
 	python3 -m pip install --user dist/*.whl
 	brain-games
+
+init:
+	poetry run flake8 brain_games
