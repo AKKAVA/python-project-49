@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
 import brain_games.cli as cli
-from brain_games.scripts.brain_even import main as game_is_even
+
+
+PLAYER_NAME = ''
 
 
 def main():
+    global PLAYER_NAME
     print("Welcome to the Brain Games!")
-    name = cli.welcome_user()
-    result = game_is_even()
-    print_result(result, name)
+    PLAYER_NAME = cli.welcome_user()
 
 
-def print_result(result: bool, name: str):
-    if result:
-        print(f"Congratulations, {name}!")
-    else:
-        print(f"Let's try again, {name}!")
+def print_good_result():
+    print(f"Congratulations, {PLAYER_NAME}!")
+
+
+def print_bad_result(ans: str, cor_ans: str):
+    print(f"'{ans}' is wrong answer ;(. Correct answer was '{cor_ans}'.")
+    print(f"Let's try again, {PLAYER_NAME}!")
 
 
 if __name__ == "__main__":
