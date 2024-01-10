@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import prompt
 from random import randint
 import brain_games.utils as utils
 
@@ -13,15 +12,15 @@ def game(games_count: int = 3) -> tuple:    # (result, player_answer, correct_an
     is_lose = False
     while games_count != 0 and not is_lose:
         num = randint(1, 100)
-        print(f'Question: {num}')
-        answer = prompt.string('Your answer: ').lower()
         correct_answer = is_even(num)
-        is_lose = not utils.check_answer(answer, correct_answer)
+        question = f'{num}'
+        round_result = utils.game_round(question, correct_answer)
+        is_lose = round_result[0]
         if is_lose:
-            return (is_lose, answer, correct_answer)
+            return round_result
         print('Correct!')
         games_count -= 1
-    return (is_lose, answer, correct_answer)
+    return round_result
 
 
 def is_even(num: int) -> str:
