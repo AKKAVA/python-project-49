@@ -7,7 +7,7 @@ def main():
     utils.game_start(game)
 
 
-def game(games_count: int = 3) -> tuple:    # (result, player_answer, correct_answer)
+def game(games_count: int = 3) -> tuple:
     print('Answer "yes" if the number is even, otherwise answer "no".')
     is_lose = False
     while games_count != 0 and not is_lose:
