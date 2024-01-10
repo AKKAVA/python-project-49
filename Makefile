@@ -29,3 +29,6 @@ test-pack:
 
 init:
 	poetry run flake8 brain_games
+
+record:
+	asciinema rec --overwrite brain-games-demo.cast
