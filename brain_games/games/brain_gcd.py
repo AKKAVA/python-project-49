@@ -22,7 +22,7 @@ def game(games_count: int = 3) -> tuple:
         print('Correct!')
         games_count -= 1
     return round_result
-    
+
 
 if __name__ == '__main__':
     main()
