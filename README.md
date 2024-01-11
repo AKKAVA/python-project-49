@@ -5,4 +5,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/4e1901eeaa42d2fce58c/maintainability)](https://codeclimate.com/github/AKKAVA/python-project-49/maintainability)
 
 ### Asciinema record:
-[![asciicast](https://asciinema.org/a/st7gpnrn86tTwLMjLYYHr2EgO.svg)](https://asciinema.org/a/st7gpnrn86tTwLMjLYYHr2EgO)
+[![asciicast](https://asciinema.org/a/i3NMWzapdJOkjBPfcO25UmY9O.svg)](https://asciinema.org/a/i3NMWzapdJOkjBPfcO25UmY9O)
