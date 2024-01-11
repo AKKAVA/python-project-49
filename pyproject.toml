@@ -1,8 +1,14 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Several games for brain"
 authors = ["AKKAVA <aleasterxs@mail.ru>"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Topic :: Games/Entertainment :: Puzzle Games"
+]
+repository = "https://github.com/AKKAVA/python-project-49.git"
 readme = "README.md"
 packages = [
   { include = "brain_games" },
