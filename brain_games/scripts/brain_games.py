@@ -3,7 +3,6 @@ import brain_games.utils as utils
 
 
 def main():
-    print("Welcome to the Brain Games!")
     utils.welcome_user()
 
 
