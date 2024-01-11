@@ -4,23 +4,15 @@ import brain_games.utils as utils
 
 
 def main():
-    utils.game_start(game)
+    message = 'Answer "yes" if the number is even, otherwise answer "no".'
+    utils.game_start(game, message)
 
 
-def game(games_count: int = 3) -> tuple:
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    is_lose = False
-    while games_count != 0 and not is_lose:
-        num = randint(1, 100)
-        correct_answer = is_even(num)
-        question = f'{num}'
-        round_result = utils.game_round(question, correct_answer)
-        is_lose = round_result[0]
-        if is_lose:
-            return round_result
-        print('Correct!')
-        games_count -= 1
-    return round_result
+def game() -> tuple:
+    num = randint(1, 100)
+    correct_answer = is_even(num)
+    question = f'{num}'
+    return (question, correct_answer)
 
 
 def is_even(num: int) -> str:

@@ -4,23 +4,15 @@ import brain_games.utils as utils
 
 
 def main():
-    utils.game_start(game)
+    message = "What is the result of the expression?"
+    utils.game_start(game, message)
 
 
-def game(games_count: int = 3) -> tuple:
-    print("What is the result of the expression?")
-    is_lose = False
-    while games_count != 0 and not is_lose:
-        num1, num2 = randint(1, 10), randint(1, 10)
-        symbol, correct_answer = select_operation(num1, num2)
-        question = f'{num1} {symbol} {num2}'
-        round_result = utils.game_round(question, correct_answer)
-        is_lose = round_result[0]
-        if is_lose:
-            return round_result
-        print('Correct!')
-        games_count -= 1
-    return round_result
+def game() -> tuple:
+    num1, num2 = randint(1, 10), randint(1, 10)
+    symbol, correct_answer = select_operation(num1, num2)
+    question = f'{num1} {symbol} {num2}'
+    return (question, correct_answer)
 
 
 def select_operation(num1: int, num2: int):
