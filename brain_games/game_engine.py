@@ -19,7 +19,7 @@ def play(game):
         if not is_lose:
             print('Correct!')
             count += 1
-    if not result[0]:
+    if not is_lose:
         utils.print_good_result(player_name)
     else:
         utils.print_bad_result(player_name, *result[1:])
