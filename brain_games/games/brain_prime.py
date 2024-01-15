@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 from random import randint
-import brain_games.utils as utils
 
 
-def main():
-    message = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    utils.game_start(game, message)
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def game() -> tuple:
@@ -23,7 +20,3 @@ def is_prime(num: int) -> str:
     if count > 1:
         return 'no'
     return 'yes'
-
-
-if __name__ == '__main__':
-    main()

@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 from random import randint
-import brain_games.utils as utils
 
 
-def main():
-    message = "What number is missing in the progression?"
-    utils.game_start(game, message)
+DESCRIPTION = "What number is missing in the progression?"
 
 
 def game() -> tuple:
@@ -29,7 +26,3 @@ def format_task(task: list) -> str:
     for val in task:
         res += f'{val} '
     return res
-
-
-if __name__ == '__main__':
-    main()

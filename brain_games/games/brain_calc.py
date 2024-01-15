@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 from random import randint, choice
-import brain_games.utils as utils
 
 
-def main():
-    message = "What is the result of the expression?"
-    utils.game_start(game, message)
+DESCRIPTION = "What is the result of the expression?"
 
 
 def game() -> tuple:
@@ -30,7 +27,3 @@ def deduction(num1, num2):
 
 def multiplucation(num1, num2):
     return num1 * num2
-
-
-if __name__ == '__main__':
-    main()
