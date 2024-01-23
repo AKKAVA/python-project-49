@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
 from random import randint, choice
+from operator import add, sub, mul
 
 
 DESCRIPTION = "What is the result of the expression?"
@@ -14,16 +14,8 @@ def game() -> tuple:
 
 def select_operation(num1: int, num2: int):
     operations = [
-        ['+', sum([num1, num2])],
-        ['-', deduction(num1, num2)],
-        ['*', multiplucation(num1, num2)]
+        ['+', add(num1, num2)],
+        ['-', sub(num1, num2)],
+        ['*', mul(num1, num2)]
     ]
     return list(choice(operations))
-
-
-def deduction(num1, num2):
-    return num1 - num2
-
-
-def multiplucation(num1, num2):
-    return num1 * num2

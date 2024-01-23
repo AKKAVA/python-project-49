@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import brain_games.utils as utils
 
 
@@ -14,12 +13,25 @@ def play(game):
     count = 0
     while count != GAMES_COUNT and not is_lose:
         question, correct_answer = game.game()
-        result = utils.game_round(question, correct_answer)
-        is_lose = result[0]
+        user_answer = utils.user_answer(question)
+        is_lose = not check_answer(str(user_answer), str(correct_answer))
         if not is_lose:
             print('Correct!')
             count += 1
     if not is_lose:
-        utils.print_good_result(player_name)
+        print_good_result(player_name)
     else:
-        utils.print_bad_result(player_name, *result[1:])
+        print_bad_result(player_name, user_answer, correct_answer)
+
+
+def print_good_result(player_name: str):
+    print(f"Congratulations, {player_name}!")
+
+
+def print_bad_result(player_name: str, ans: str, cor_ans: str):
+    print(f"'{ans}' is wrong answer ;(. Correct answer was '{cor_ans}'.")
+    print(f"Let's try again, {player_name}!")
+
+
+def check_answer(user_answer: str, correct_answer: str) -> bool:
+    return user_answer == correct_answer
